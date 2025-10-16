@@ -335,7 +335,7 @@
         <section id="contact" class="bg-black max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16" data-aos="fade-up">
             <h3 class="text-2xl sm:text-3xl font-bold text-center text-gray-100">Get in Touch</h3>
             <div class="mt-8 grid grid-cols-1 gap-8">
-                <form class="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto form-container" data-aos="fade-right" id="contactForm">
+                <form class="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto form-container" data-aos="fade-right" id="contactForm" method="post">
                     <input type="text" placeholder="Name" name="name"
                         class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" required/>
                     <input type="email" placeholder="Email" name="email"
@@ -430,7 +430,7 @@
         e.preventDefault();
         const data = Object.fromEntries(new FormData(e.target).entries());
         
-        const res = await fetch("https://n8n-zg5r.onrender.com/webhook/91c21201-9c97-48b8-9028-88be670140d2", {
+        const res = await fetch("https://n8n-zg5r.onrender.com/webhook/contact-form", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
