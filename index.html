@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adapta Pharma offers innovative pharmaceutical machinery solutions for tablet press and capsule filling, trusted globally." />
+    <meta name="keywords" content="pharmaceutical machinery, tablet press, capsule filling, Adapta Pharma" />
+    <meta name="author" content="Adapta Pharma" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.adaptapharma.com" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:title" content="Adapta Pharma - Innovative Pharma Machinery Solutions" />
+    <meta property="og:description" content="Trusted worldwide for reliable and efficient pharmaceutical machinery solutions." />
+    <meta property="og:image" content="https://www.adaptapharma.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.adaptapharma.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Adapta Pharma - Innovative Pharmaceutical Machinery Solutions</title>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Adapta Pharma",
+        "url": "https://www.adaptapharma.com",
+        "logo": "https://www.adaptapharma.com/images/logo.png",
+        "description": "Adapta Pharma provides innovative pharmaceutical machinery solutions, including tablet press and capsule filling machines, trusted worldwide.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "info@adaptapharma.com"
+        }
+    }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #3b82f6;
+            background-color: rgba(59, 130, 246, 0.1);
+            outline: none;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-section {
+            height: 85vh;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+        }
+
+        .product-img {
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .product-hover:hover .img-front {
+            opacity: 0;
+        }
+
+        .product-hover:hover .img-back {
+            opacity: 1;
+        }
+
+        .img-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .dark .bg-gray-100 {
+            background-color: #1f2937;
+        }
+
+        .dark .bg-white {
+            background-color: #374151;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: #1f2937;
+        }
+
+        .dark .bg-gray-200 {
+            background-color: #374151;
+        }
+
+        .dark .bg-blue-100 {
+            background-color: #1f2937;
+        }
+
+        .dark .bg-black {
+            background-color: #1f2937;
+        }
+
+        .dark .text-gray-600 {
+            color: #d1d5db;
+        }
+
+        .dark .text-gray-700 {
+            color: #e5e7eb;
+        }
+
+        .dark .text-gray-800 {
+            color: #f3f4f6;
+        }
+
+        .dark .text-gray-900 {
+            color: #f3f4f6;
+        }
+
+        @media (max-width: 640px) {
+            .hero-section {
+                height: auto;
+                min-height: 60vh;
+                padding: 4rem 1rem;
+            }
+
+            .hero-section h2 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background-color: #f3f4f6;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .dark .nav-menu.active {
+                background-color: #374151;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .product-img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .form-container input,
+            .form-container textarea {
+                font-size: 0.9rem;
+                padding: 0.75rem;
+            }
+
+            .swiper-slide img {
+                width: 100px;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 641px) {
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500 ease-in-out">
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" onclick="toggleDarkMode()"
+        class="fixed top-4 right-16 sm:right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 rounded-lg shadow hover:bg-gray-300 dark:hover:bg-gray-600 z-50">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Hamburger Menu Button -->
+    <button id="hamburger-toggle" class="hamburger fixed top-4 right-4 sm:hidden text-gray-800 dark:text-gray-200 px-3 py-2 rounded-lg shadow z-50">
+        ☰
+    </button>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-blue-50 dark:bg-gray-900 shadow-md z-40 transition text-gray-800 dark:text-gray-100" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-4">
+            <h1 class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">Adapta Pharma</h1>
+            <nav class="nav-menu hidden sm:flex space-x-4 sm:space-x-6">
+                <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold text-sm sm:text-base">Home</a>
+                <a href="about.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">About Us</a>
+                <a href="#products" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">Products</a>
+                <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">Contact</a>
+            </nav>
+            <a href="#contact"
+                class="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base hidden sm:block">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative bg-white dark:bg-gray-800 h-[85vh] sm:h-[70vh] flex items-center justify-center text-center">
+        <div data-aos="zoom-in" class="px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100">
+                Innovative Pharma Machinery Solutions
+            </h2>
+            <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300">
+                Trusted worldwide for reliability and efficiency.
+            </p>
+            <div class="mt-6 space-x-2 sm:space-x-4" data-aos="fade-up" data-aos-delay="300">
+                <a href="#products"
+                    class="inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:scale-105 transition text-sm sm:text-base">Explore Products</a>
+                <a href="#contact"
+                    class="inline-block bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:scale-105 transition text-sm sm:text-base">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-gray-50 dark:bg-gray-900 py-12 sm:py-16" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-center">
+            <img src="https://placehold.co/500x350" alt="Factory" class="w-full h-auto rounded-xl shadow-lg" data-aos="fade-right" />
+            <div data-aos="fade-left">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100">About Adapta Pharma</h3>
+                <p class="text-gray-600 dark:text-gray-300 mt-4 text-sm sm:text-base">
+                    We are a leading provider of pharmaceutical machinery with decades
+                    of experience in delivering innovative, reliable, and efficient
+                    solutions worldwide.
+                </p>
+                <a href="about.html"
+                    class="inline-block mt-6 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="bg-gray-50 dark:bg-gray-900 py-12 sm:py-16" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 counter" data-target="25">0</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">Years of Experience</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 counter" data-target="100">0</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">Global Clients</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 counter" data-target="500">0</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">Machines Installed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="bg-white dark:bg-gray-800 py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 dark:text-gray-100" data-aos="fade-up">Our Machinery</h3>
+            <div class="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="relative product-hover bg-white dark:bg-gray-700 p-6 rounded-xl shadow" data-aos="fade-right">
+                    <div class="relative w-full h-48 overflow-hidden rounded">
+                        <img src="https://placehold.co/300x200?text=Front"
+                            class="absolute inset-0 w-full h-full object-cover img-front product-img" />
+                        <img src="https://placehold.co/300x200?text=Back"
+                            class="absolute inset-0 w-full h-full object-cover img-back product-img" />
+                    </div>
+                    <h4 class="mt-4 font-bold text-gray-800 dark:text-gray-100 text-lg sm:text-xl">Tablet Press Machine</h4>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2 text-sm sm:text-base">Efficient and durable for high-volume production.</p>
+                </div>
+                <div class="relative product-hover bg-white dark:bg-gray-700 p-6 rounded-xl shadow" data-aos="fade-left">
+                    <div class="relative w-full h-48 overflow-hidden rounded">
+                        <img src="https://placehold.co/300x200?text=Front"
+                            class="absolute inset-0 w-full h-full object-cover img-front product-img" />
+                        <img src="https://placehold.co/300x200?text=Back"
+                            class="absolute inset-0 w-full h-full object-cover img-back product-img" />
+                    </div>
+                    <h4 class="mt-4 font-bold text-gray-800 dark:text-gray-100 text-lg sm:text-xl">Capsule Filling Machine</h4>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2 text-sm sm:text-base">Precision-engineered for consistent results.</p>
+                </div>
+            </div>
+            <div class="mt-8 sm:mt-10 flex justify-center" data-aos="fade-up" data-aos-delay="300">
+                <a href="products.html"
+                    class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:scale-105 transition text-sm sm:text-base">Explore More Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="bg-gray-50 dark:bg-gray-900 py-12 sm:py-16" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100">Our Clients</h3>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/150x80?text=Client+1" alt="Client 1" class="mx-auto" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/150x80?text=Client+2" alt="Client 2" class="mx-auto" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/150x80?text=Client+3" alt="Client 3" class="mx-auto" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/150x80?text=Client+4" alt="Client 4" class="mx-auto" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/150x80?text=Client+5" alt="Client 5" class="mx-auto" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="bg-black">
+        <section id="contact" class="bg-black max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16" data-aos="fade-up">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center text-gray-100">Get in Touch</h3>
+            <div class="mt-8 grid grid-cols-1 gap-8">
+                <form class="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto form-container" data-aos="fade-right">
+                    <input type="text" placeholder="Name"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
+                    <input type="email" placeholder="Email"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
+                    <input type="text" placeholder="Company"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
+                    <textarea placeholder="Message" rows="4" style="resize: none;"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base"></textarea>
+                    <button
+                        class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Request Quote Button -->
+    <a href="#contact"
+        class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition z-50 text-sm sm:text-base"
+        data-aos="zoom-in">
+        📩 Request Quote
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 sm:py-10 transition-all duration-500 ease-in-out" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            <div>
+                <h4 class="text-white font-bold text-lg sm:text-xl">Adapta Pharma</h4>
+                <p class="mt-2 text-sm sm:text-base">Innovative pharma machinery solutions.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg sm:text-xl">Quick Links</h4>
+                <ul class="mt-2 space-y-2 text-sm sm:text-base">
+                    <li><a href="#products" class="hover:text-white transition">Products</a></li>
+                    <li><a href="#about" class="hover:text-white transition">About</a></li>
+                    <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg sm:text-xl">Subscribe</h4>
+                <form class="mt-2 flex">
+                    <input type="email" placeholder="Email"
+                        class="w-full p-2 rounded-l border-0 focus:ring-2 focus:ring-blue-600 dark:bg-gray-800 dark:text-gray-200 transition text-sm sm:text-base" />
+                    <button
+                        class="bg-blue-600 px-4 rounded-r text-white hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-6 sm:mt-10 text-gray-500 text-sm">
+            © 2025 Adapta Pharma. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            body.classList.toggle('dark');
+
+            if (body.classList.contains('dark')) {
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark');
+                document.getElementById('theme-icon').textContent = '☀️';
+            }
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
+            });
+        });
+
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200;
+        counters.forEach((counter) => {
+            const updateCount = () => {
+                const target = +counter.getAttribute("data-target");
+                const count = +counter.innerText;
+                const increment = Math.ceil(target / speed);
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(updateCount, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+            },
+        });
+    </script>
+</body>
+</html>
