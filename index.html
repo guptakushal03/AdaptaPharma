@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <head>
@@ -335,16 +335,16 @@
         <section id="contact" class="bg-black max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16" data-aos="fade-up">
             <h3 class="text-2xl sm:text-3xl font-bold text-center text-gray-100">Get in Touch</h3>
             <div class="mt-8 grid grid-cols-1 gap-8">
-                <form class="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto form-container" data-aos="fade-right">
-                    <input type="text" placeholder="Name"
+                <form class="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto form-container" data-aos="fade-right" id="contactForm">
+                    <input type="text" placeholder="Name" name="name"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" required/>
+                    <input type="email" placeholder="Email" name="email"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" required/>
+                    <input type="text" placeholder="Company" name="company"
                         class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
-                    <input type="email" placeholder="Email"
-                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
-                    <input type="text" placeholder="Company"
-                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" />
-                    <textarea placeholder="Message" rows="4" style="resize: none;"
-                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base"></textarea>
-                    <button
+                    <textarea placeholder="Message" rows="4" style="resize: none;" name="message"
+                        class="border p-3 rounded w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white placeholder-gray-400 text-sm sm:text-base" required></textarea>
+                    <button type="submit"
                         class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">
                         Submit
                     </button>
@@ -424,6 +424,23 @@
                 navMenu.classList.toggle('active');
                 hamburger.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
             });
+        });
+
+        document.getElementById("contactForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        
+        const res = await fetch("https://n8n-zg5r.onrender.com/webhook/91c21201-9c97-48b8-9028-88be670140d2", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            alert("✅ Message sent successfully!");
+        } else {
+            alert("❌ Failed to send message. Check your n8n logs.");
+        }
         });
 
         const counters = document.querySelectorAll(".counter");
