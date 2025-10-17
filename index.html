@@ -427,20 +427,41 @@
         });
 
         document.getElementById("contactForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const data = Object.fromEntries(new FormData(e.target).entries());
+            e.preventDefault();
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
         
-        const res = await fetch("https://n8n-zg5r.onrender.com/webhook-test/contact-form", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-        });
-
-        if (res.ok) {
-            alert("✅ Message sent successfully!");
-        } else {
-            alert("❌ Failed to send message. Check your n8n logs.");
-        }
+            const data = Object.fromEntries(new FormData(e.target).entries());
+            
+            try {
+                const res = await fetch("https://n8n-zg5r.onrender.com/webhook-test/contact-form", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+        
+                const result = await res.json();
+                
+                if (result.success) {
+                    e.target.innerHTML = `
+                        <div class="text-center py-8">
+                            <div class="text-green-600 text-6xl mb-4">✅</div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">${result.message}</h3>
+                            <p class="text-gray-600 dark:text-gray-300">We'll reply within 24 hours!</p>
+                            <button onclick="location.reload()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send Another</button>
+                        </div>
+                    `;
+                } else {
+                    alert("❌ " + result.message);
+                }
+            } catch (error) {
+                alert("❌ Connection error. Please try again.");
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
 
         const counters = document.querySelectorAll(".counter");
@@ -476,4 +497,5 @@
     </script>
 </body>
 </html>
+
 
