@@ -477,18 +477,41 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = navMenu.querySelectorAll('a');
+
+            // Toggle menu
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
+                hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            });
+
+            // Close menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.textContent = '☰';
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close menu on window resize if screen size is above mobile breakpoint
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 640) {
+                    navMenu.classList.remove('active');
+                    hamburger.textContent = '☰';
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Apply saved theme
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark');
                 document.getElementById('theme-icon').textContent = '☀️';
             }
-
-            const hamburger = document.getElementById('hamburger-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                hamburger.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
-            });
         });
 
         document.getElementById("contactForm").addEventListener("submit", async (e) => {
