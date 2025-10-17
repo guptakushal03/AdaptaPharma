@@ -430,7 +430,7 @@
         e.preventDefault();
         const data = Object.fromEntries(new FormData(e.target).entries());
         
-        const res = await fetch("https://n8n-zg5r.onrender.com/webhook/contact-form", {
+        const res = await fetch("https://n8n-zg5r.onrender.com/webhook-test/contact-form", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -476,3 +476,4 @@
     </script>
 </body>
 </html>
+
