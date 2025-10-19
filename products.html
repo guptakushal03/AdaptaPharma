@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Adapta Pharma’s pharmaceutical machinery, including high-speed tablet press and capsule filling machines." />
+    <meta name="keywords" content="pharmaceutical machinery, tablet press, capsule filling, Adapta Pharma, products" />
+    <meta name="author" content="Adapta Pharma" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.adaptapharma.com/products.html" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:title" content="Pharmaceutical Machinery Products | Adapta Pharma" />
+    <meta property="og:description" content="Discover Adapta Pharma’s innovative pharmaceutical machinery, including tablet press and capsule filling solutions." />
+    <meta property="og:image" content="https://www.adaptapharma.com/images/products-og-image.jpg" />
+    <meta property="og:url" content="https://www.adaptapharma.com/products.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Pharmaceutical Machinery Products | Adapta Pharma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" />
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "High-Speed Tablet Press Machine",
+            "description": "Precision-engineered tablet press machine for high-volume production with GMP compliance.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Adapta Pharma"
+            },
+            "image": "https://www.adaptapharma.com/images/tablet-press-machine.webp",
+            "url": "https://www.adaptapharma.com/products.html#tablet"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Automatic Capsule Filling Machine",
+            "description": "State-of-the-art automatic capsule filler for accurate and efficient pharmaceutical production.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Adapta Pharma"
+            },
+            "image": "https://www.adaptapharma.com/images/capsule-filler-machine.webp",
+            "url": "https://www.adaptapharma.com/products.html#capsule"
+        }
+    ]
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-section {
+            height: 85vh;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            padding: 1.5rem 1rem;
+            box-sizing: border-box;
+        }
+
+        .hero-section .content-container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #3b82f6;
+            background-color: rgba(59, 130, 246, 0.1);
+            outline: none;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            margin-bottom: 1rem;
+        }
+
+        .dark .bg-gray-100 { background-color: #1f2937; }
+        .dark .bg-gray-200 { background-color: #374151; }
+        .dark .bg-gray-50 { background-color: #1f2937; }
+        .dark .bg-white { background-color: #374151; }
+        .dark .bg-blue-100 { background-color: #1f2937; }
+        .dark .bg-black:not(.cta-section) { background-color: #1f2937; }
+        .dark .text-gray-600 { color: #d1d5db; }
+        .dark .text-gray-700 { color: #e5e7eb; }
+        .dark .text-gray-800 { color: #f3f4f6; }
+        .dark .text-gray-900 { color: #f3f4f6; }
+
+        .category-nav {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .category-nav.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 640px) {
+            .hero-section {
+                height: 85vh;
+                padding: 1rem 0.5rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.75rem;
+                line-height: 1.2;
+            }
+
+            .hero-section p {
+                font-size: 0.9rem;
+                margin-top: 0.5rem;
+            }
+
+            .hero-section .content-container .button-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background-color: #f3f4f6;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 50;
+                max-height: calc(100vh - 4rem);
+                overflow-y: auto;
+            }
+
+            .dark .nav-menu.active {
+                background-color: #374151;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .category-nav {
+                font-size: 0.85rem;
+                gap: 1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .product-section {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .product-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .product-section p,
+            .product-section ul li {
+                font-size: 0.85rem;
+            }
+
+            .product-section img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                padding: 1rem;
+            }
+
+            .modal-content h3 {
+                font-size: 1.25rem;
+            }
+
+            .modal-content p {
+                font-size: 0.85rem;
+            }
+
+            .modal-content img {
+                max-height: 150px;
+                object-fit: cover;
+            }
+
+            .form-container input,
+            .form-container textarea {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (min-width: 641px) {
+            .hamburger {
+                display: none;
+            }
+
+            .hero-section .content-container .button-group {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+
+        #products, #tablet, #capsule, #cta {
+            scroll-margin-top: 120px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500 ease-in-out">
+    <!-- Dark Mode Button -->
+    <button id="theme-toggle" onclick="toggleDarkMode()" class="fixed top-4 right-16 sm:right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 rounded-lg shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition z-50">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Hamburger Menu Button -->
+    <button id="hamburger-toggle" class="hamburger fixed top-4 right-4 sm:hidden text-gray-800 dark:text-gray-200 px-3 py-2 rounded-lg shadow z-50" aria-label="Toggle menu">
+        ☰
+    </button>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-blue-50 dark:bg-gray-900 shadow-md z-40 transition text-gray-800 dark:text-gray-100" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-4">
+            <h1 class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">Adapta Pharma</h1>
+            <nav class="nav-menu hidden sm:flex space-x-4 sm:space-x-6">
+                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">Home</a>
+                <a href="about.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">About Us</a>
+                <a href="#products" class="text-blue-600 dark:text-blue-400 font-semibold text-sm sm:text-base">Products</a>
+                <a href="index.html#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-sm sm:text-base">Contact</a>
+            </nav>
+            <a href="index.html#contact" class="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base hidden sm:block">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Sticky Category Nav -->
+    <div class="bg-gray-900 sticky top-[4rem] z-30 shadow category-nav">
+        <div class="max-w-7xl mx-auto flex gap-4 sm:gap-6 overflow-x-auto px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium">
+            <a href="#tablet" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-gray-700 dark:text-gray-200 whitespace-nowrap">Tablet Machines</a>
+            <a href="#capsule" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-gray-700 dark:text-gray-200 whitespace-nowrap">Capsule Filling</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative flex items-center justify-center bg-white dark:bg-gray-800 text-center transition-all duration-500 ease-in-out">
+        <div class="content-container" data-aos="zoom-in">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100">Our Pharma Machinery</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300">Advanced solutions engineered for precision and efficiency.</p>
+            <div class="mt-4 sm:mt-6 button-group flex justify-center">
+                <a href="#products" class="inline-block bg-blue-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg hover:scale-105 transition text-sm sm:text-base">Explore Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
+        <section id="tablet" class="product-section bg-white dark:bg-gray-800 px-4 sm:px-6 py-6 sm:py-8 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="https://placehold.co/500x400?text=500x400" alt="High-Speed Tablet Press" class="w-full h-auto rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500" loading="lazy" />
+                </div>
+                <div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">High-Speed Tablet Press</h2>
+                    <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Precision-engineered for high-volume tablet production with GMP compliance.
+                    </p>
+                    <ul class="mt-3 sm:mt-4 space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-200">
+                        <li>✔ High-speed output</li>
+                        <li>✔ GMP-compliant design</li>
+                        <li>✔ Easy maintenance</li>
+                    </ul>
+                    <div class="mt-4 sm:mt-6">
+                        <button onclick="openModal('tablet1')" class="bg-blue-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capsule" class="product-section bg-white dark:bg-gray-800 px-4 sm:px-6 py-6 sm:py-8 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">Automatic Capsule Filler</h2>
+                    <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        State-of-the-art solution for accurate and efficient capsule filling.
+                    </p>
+                    <ul class="mt-3 sm:mt-4 space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-200">
+                        <li>✔ High precision</li>
+                        <li>✔ Automated operation</li>
+                        <li>✔ Scalable design</li>
+                    </ul>
+                    <div class="mt-4 sm:mt-6">
+                        <button onclick="openModal('capsule1')" class="bg-blue-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <img src="https://placehold.co/500x400" alt="Automatic Capsule Filler" class="w-full h-auto rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500" loading="lazy" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA -->
+    <section id="cta" class="relative bg-black cta-section py-8 sm:py-12 text-center transition-all duration-500 ease-in-out" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-100">Want to Work With Us?</h2>
+            <p class="mt-3 text-sm sm:text-base text-gray-300">Let’s build innovative pharmaceutical solutions together.</p>
+            <a href="index.html#contact" class="mt-4 sm:mt-6 inline-block bg-blue-600 text-white font-semibold px-3 sm:px-5 py-2 sm:py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 sm:py-10 transition-all duration-500 ease-in-out" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            <div>
+                <h4 class="text-white font-bold text-base sm:text-lg">Adapta Pharma</h4>
+                <p class="mt-2 text-sm sm:text-base">Innovative pharma machinery solutions.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base sm:text-lg">Quick Links</h4>
+                <ul class="mt-2 space-y-2 text-sm sm:text-base">
+                    <li><a href="#products" class="hover:text-white transition">Products</a></li>
+                    <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                    <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base sm:text-lg">Subscribe</h4>
+                <form class="mt-2 flex" id="subscribeForm">
+                    <input type="email" id="email" placeholder="Email" class="w-full p-2 rounded-l border-0 focus:ring-2 focus:ring-blue-600 dark:bg-gray-800 dark:text-gray-200 transition text-sm sm:text-base" required />
+                    <button class="bg-blue-600 px-3 sm:px-4 rounded-r text-white hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base" type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-6 sm:mt-8 text-gray-500 text-sm">
+            © 2025 Adapta Pharma. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 transition-opacity duration-500">
+        <div id="modalContent" class="modal-content bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl max-w-lg w-full relative shadow-xl transform scale-95 transition-all duration-500">
+            <button class="absolute top-2 right-2 text-gray-600 dark:text-gray-300 hover:text-red-500 transition" onclick="closeModal()" aria-label="Close modal">✖</button>
+            <h3 id="modalTitle" class="text-lg sm:text-xl font-bold mb-3 text-gray-900 dark:text-gray-100"></h3>
+            <img id="modalImage" src="" class="w-full h-auto rounded-lg mb-3" alt="Product Image">
+            <p id="modalDescription" class="text-sm sm:text-base text-gray-600 dark:text-gray-300"></p>
+            <a href="index.html#contact" class="mt-3 sm:mt-4 inline-block bg-blue-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition text-sm sm:text-base">Request Quote</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 600, once: true, disable: 'mobile' });
+
+        const productDetails = {
+            tablet1: { title: "High-Speed Tablet Press", image: "https://via.placeholder.com/400x250", description: "This machine ensures high speed tablet production with precision and GMP compliance." },
+            capsule1: { title: "Automatic Capsule Filler", image: "https://via.placeholder.com/400x250", description: "State-of-the-art automatic capsule filler with accuracy and efficiency." },
+        };
+
+        function openModal(productId) {
+            document.getElementById("modalTitle").innerText = productDetails[productId].title;
+            document.getElementById("modalImage").src = productDetails[productId].image;
+            document.getElementById("modalDescription").innerText = productDetails[productId].description;
+            document.getElementById("productModal").classList.remove("hidden");
+            document.getElementById("modalContent").classList.add("scale-100");
+        }
+
+        function closeModal() {
+            document.getElementById("productModal").classList.add("hidden");
+            document.getElementById("modalContent").classList.remove("scale-100");
+        }
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            body.classList.toggle('dark');
+            themeIcon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark');
+                document.getElementById('theme-icon').textContent = '☀️';
+            }
+
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = navMenu.querySelectorAll('a');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
+                hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.textContent = '☰';
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 640) {
+                    navMenu.classList.remove('active');
+                    hamburger.textContent = '☰';
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Products section visibility observer
+            const productsSection = document.getElementById('products');
+            const categoryNav = document.querySelector('.category-nav');
+
+            if (productsSection && categoryNav) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            categoryNav.classList.add('visible');
+                        } else {
+                            categoryNav.classList.remove('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1, // Show/hide when 10% of products section is visible
+                    rootMargin: '0px' // No extra margin
+                });
+
+                observer.observe(productsSection);
+            }
+        });
+
+        document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="flex items-center justify-center"><svg class="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle><path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Subscribing...</span>';
+            submitBtn.disabled = true;
+            const email = form.querySelector('input[type="email"]').value;
+            try {
+                const res = await fetch("https://n8n-zg5r.onrender.com/webhook-test/subscribers-list", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email }),
+                });
+                if (res.ok) {
+                    showSuccessMessage(email);
+                    form.reset();
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                showErrorMessage();
+            } finally {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        function showSuccessMessage(email) {
+            alert(`Thank you! You have successfully subscribed with ${email}.`);
+        }
+
+        function showErrorMessage() {
+            alert('Oops! Something went wrong. Please try again.');
+        }
+    </script>
+</body>
+</html>
